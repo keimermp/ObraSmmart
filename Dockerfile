@@ -1,4 +1,6 @@
-# Etapa 1: compilar CSS y JavaScript con Vite
+# ==========================================
+# ETAPA 1: COMPILAR FRONTEND CON VITE
+# ==========================================
 FROM node:22-bookworm-slim AS frontend
 
 WORKDIR /app
@@ -10,10 +12,14 @@ COPY . .
 RUN npm run build
 
 
-# Etapa 2: preparar Laravel con PHP y Apache
+# ==========================================
+# ETAPA 2: LARAVEL + APACHE
+# ==========================================
 FROM php:8.3-apache
 
+# Dependencias del sistema y certificados SSL
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
     libicu-dev \
     libzip-dev \
     libpng-dev \
@@ -36,13 +42,13 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-# Copiar el proyecto
+# Copiar proyecto Laravel
 COPY . .
 
-# Copiar los archivos compilados por Vite
+# Copiar archivos compilados por Vite
 COPY --from=frontend /app/public/build ./public/build
 
-# Instalar dependencias de producción y configurar Apache
+# Instalar dependencias de producción
 RUN composer install \
     --no-dev \
     --prefer-dist \
