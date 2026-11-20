@@ -7,6 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{-- ICONO DE OBRASMART --}}
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>ObraSmart</title>
@@ -33,21 +36,14 @@
         .os-navbar {
             width: 100%;
             min-height: 72px;
-
             background: #ffffff;
-
             border-bottom: 1px solid #e5e7eb;
-
             display: flex;
             align-items: center;
-
             padding: 0 35px;
-
             gap: 30px;
-
             position: sticky;
             top: 0;
-
             z-index: 1000;
         }
 
@@ -57,32 +53,20 @@
             display: flex;
             align-items: center;
             gap: 10px;
-
             text-decoration: none;
-
             color: #111827;
-
             flex-shrink: 0;
         }
 
         .os-logo {
             width: 42px;
             height: 42px;
-
             border-radius: 10px;
-
-            background: linear-gradient(
-                135deg,
-                #2563eb,
-                #4f46e5
-            );
-
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
             color: white;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             font-size: 21px;
             font-weight: 800;
         }
@@ -102,24 +86,17 @@
         .os-menu {
             display: flex;
             align-items: center;
-
             gap: 5px;
-
             flex: 1;
         }
 
         .os-menu a {
             text-decoration: none;
-
             color: #4b5563;
-
             padding: 10px 13px;
-
             border-radius: 8px;
-
             font-size: 13px;
             font-weight: 600;
-
             transition: .2s;
         }
 
@@ -138,61 +115,43 @@
         .os-user {
             display: flex;
             align-items: center;
-
             gap: 9px;
-
             flex-shrink: 0;
         }
 
         .os-avatar {
             width: 37px;
             height: 37px;
-
             border-radius: 50%;
-
             background: #dbeafe;
-
             color: #1d4ed8;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             font-weight: 700;
         }
 
         .os-user-name {
             font-size: 13px;
             font-weight: 700;
-
             color: #374151;
         }
 
         .os-user-role {
             font-size: 10px;
-
             color: #6b7280;
-
             margin-top: 2px;
         }
 
         .os-logout {
             margin-left: 8px;
-
             border: none;
-
             background: #fef2f2;
-
             color: #dc2626;
-
             padding: 8px 10px;
-
             border-radius: 7px;
-
             cursor: pointer;
-
             font-size: 12px;
-
             font-weight: 600;
         }
 
@@ -204,31 +163,24 @@
 
         .os-header {
             background: white;
-
             border-bottom: 1px solid #e5e7eb;
-
             padding: 25px 35px;
         }
 
         .os-header-inner {
             max-width: 1400px;
-
             margin: auto;
         }
 
         .os-header h2 {
             margin: 0;
-
             font-size: 24px;
-
             color: #111827;
         }
 
         .os-header p {
             margin: 6px 0 0;
-
             color: #6b7280;
-
             font-size: 13px;
         }
 
@@ -240,9 +192,7 @@
 
         .os-container {
             max-width: 1400px;
-
             margin: auto;
-
             padding: 30px 35px;
         }
 
@@ -252,15 +202,12 @@
 
             .os-navbar {
                 flex-wrap: wrap;
-
                 padding: 15px 20px;
             }
 
             .os-menu {
                 order: 3;
-
                 width: 100%;
-
                 overflow-x: auto;
             }
 
