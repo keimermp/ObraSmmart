@@ -45,6 +45,8 @@ WORKDIR /var/www/html
 # Copiar proyecto Laravel
 COPY . .
 
+RUN ls -l /var/www/html/public/favicon.png
+
 # Copiar archivos compilados por Vite
 COPY --from=frontend /app/public/build ./public/build
 
