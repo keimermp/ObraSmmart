@@ -7,6 +7,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {{-- ICONO DE OBRASMART --}}
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('favicon.png') }}?v=3">
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}?v=3">
+
     <title>ObraSmart | Estimación de construcción</title>
 
     <style>
